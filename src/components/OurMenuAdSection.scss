@@ -1,0 +1,19 @@
+.OurProductsSection {
+  &__item {
+    padding: 56px;
+  }
+
+  &__image-container {
+    margin: 0 auto;
+    max-width: 200px;
+    margin-bottom: 30px;
+  }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+    grid-gap: 20px;
+    justify-content: center;
+    padding: 0 20px 0 30px;
+}

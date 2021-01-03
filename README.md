@@ -1,4 +1,4 @@
-### Sample React Coffee Shopify Shop
+# Sample React Coffee Shopify Shop
 Built a sample coffee shop using React, Context, and Shopify. 
 
 Images were sourced from Pexels and Unsplash. 

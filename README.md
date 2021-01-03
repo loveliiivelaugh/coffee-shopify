@@ -25,8 +25,6 @@ When the above command completes you'll be able to view your website at `http://
 This project uses the following libraries and services:
 - Framework - [Create React App](https://create-react-app.dev) with React Router
 - UI Kit - [Bootstrap](https://react-bootstrap.github.io)
-- Authentication - [Firebase Auth](https://firebase.google.com/products/auth)
-- Database - [Cloud Firestore](https://firebase.google.com/products/firestore)
 - Contact Form - [Formspree](https://formspree.io)
 - Analytics - [Google Analytics](https://googleanalytics.com)
 - Hosting - [Netlify](https://netlify.com)
@@ -72,69 +70,6 @@ function MyComponent(){
 ```
 </p>
 </details>
-
-<details>
-<summary><b>Authentication</b></summary>
-<p>
-  This project uses <a href="https://firebase.google.com">Firebase Auth</a> and includes a convenient <code>useAuth</code> hook (located in <code><a href="src/util/auth.js">src/util/auth.js</a></code>) that wraps Firebase and gives you common authentication methods. Depending on your needs you may want to edit this file and expose more Firebase functionality.
-
-```js
-import { useAuth } from './../util/auth.js';
-
-function MyComponent(){
-  // Get the auth object in any component
-  const auth = useAuth();
-
-  // Depending on auth state show signin or signout button
-  // auth.user will either be an object, null when loading, or false if signed out
-  return (
-    <div>
-      {auth.user ? (
-        <button onClick={(e) => auth.signout()}>Signout</button>
-      ) : (
-        <button onClick={(e) => auth.signin('hello@divjoy.com', 'yolo')}>Signin</button>
-      )}
-    </div>
-  );
-}
-```
-</p>
-</details>
-
-<details>
-<summary><b>Database</b></summary>
-<p>
-  This project uses <a href="https://firebase.google.com/products/firestore">Cloud Firestore</a> and includes some data fetching hooks to get you started (located in <code><a href="src/util/db.js">src/util/db.js</a></code>). You'll want to edit that file and add any additional query hooks you need for your project.
-
-```js
-import { useAuth } from './../util/auth.js';
-import { useItemsByOwner } from './../util/db.js';
-import ItemsList from './ItemsList.js';
-
-function ItemsPage(){
-  const auth = useAuth();
-
-  // Fetch items by owner
-  // Returned status value will be "idle" if we're waiting on 
-  // the uid value or "loading" if the query is executing.
-  const uid = auth.user ? auth.user.uid : undefined;
-  const { data: items, status } = useItemsByOwner(uid);
-
-  // Once we have items data render ItemsList component
-  return (
-    <div>
-      {(status === "idle" || status === "loading") ? (
-        <span>One moment please</span>
-      ) : (
-        <ItemsList data={items}>
-      )}
-    </div>
-  );
-}
-```
-</p>
-</details>
-
 <details>
 <summary><b>Deployment</b></summary>
 <p>

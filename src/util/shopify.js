@@ -8,6 +8,6 @@ import Client from "shopify-buy";
 // });
 
 export const client = Client.buildClient({
-  storefrontAccessToken: "82c11e070381463465df43242147166d",
-  domain: "react-coffee-shop-test.myshopify.com",
+  storefrontAccessToken: "insertAccessTokenHere",
+  domain: "Your-shop.myshopify.com",
 });

@@ -1,6 +1,8 @@
 # Sample React Coffee Shopify Shop
 Built a sample coffee shop using React, Context, and Shopify. 
 
+Visit live at --> https://coffee-shop-shopify-context.netlify.app/
+
 Images were sourced from Pexels and Unsplash. 
 
 To run locally follow the below instructions. Set up a Shopify shop. Add products, and replace your Shopify private app API credentials in the .env file. Update the util/shopify.js file with your keys. Or you can uncomment the test shop credentials that are commented out.

@@ -1,5 +1,21 @@
+#  ![Coffee](/public/coffee_cup_togo.png) Coffee Shopify Shop
 
+## Description
+
+Small example React.js web application integrated with Shopify via their RESTful APIs. Feature's a wide range of pages to demonstrate the possibilities capable with these technologies including a universally acessible cart and single product pages automatically created whenever a new product is added via the Shopify admin console.
+
+## Preview
+
+[Screenshot](/public/screenshot.png)
 ## 👉 Get Started
+Clone Repo
+```
+git clone ... 
+```
+Change directory into project folder
+```
+cd <project-name-just-cloned>
+```
 Install dependencies
 ```
 npm install

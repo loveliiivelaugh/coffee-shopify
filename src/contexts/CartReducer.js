@@ -90,6 +90,7 @@ async function decreaseItem(checkoutId, item) {
         }
     });
 }
+
 const createCheckout = async () => {
     const checkout = await client.checkout.create();
     localStorage.setItem("checkout", checkout.id);

@@ -25,8 +25,6 @@ A sample coffee shop powered by Shopify. Built with React.js. Features 8 core pa
 
 ## Screenshot(s)
 
-![Screenshot](/public/screenshot.png)
-
 ![Screenshot 1](/src/assets/screenshot1.png)
 
 ![Screenshot 2](/src/assets/screenshot2.png)

@@ -2,12 +2,17 @@ import React, { createContext, useReducer, useEffect } from 'react';
 import { CartReducer, someItems } from './CartReducer';
 import { client } from '../util/shopify';
 
-export const CartContext = createContext()
+export const CartContext = createContext();
 
 
 const checkout_id = localStorage.getItem("checkout");
 const storage = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
-const initialState = { cartItems: storage, ...someItems(storage), checkout: false, checkout_id: checkout_id };
+const initialState = { 
+    cartItems: storage, 
+    ...someItems(storage), 
+    checkout: false, 
+    checkout_id: checkout_id 
+};
 
 const CartContextProvider = ({children}) => {
     const [state, dispatch] = useReducer(CartReducer, initialState)

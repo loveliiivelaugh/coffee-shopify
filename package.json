@@ -3,7 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "keywords": [
-    "developer", "portfolio", "react", "sql", "html", "json", "bootstrap", "javascript"
+    "developer",
+    "portfolio",
+    "react",
+    "sql",
+    "html",
+    "json",
+    "bootstrap",
+    "javascript"
   ],
   "dependencies": {
     "@analytics/google-analytics": "0.2.2",
@@ -18,11 +25,13 @@
     "react-bootstrap": "1.0.0-beta.16",
     "react-dom": "16.12.0",
     "react-hook-form": "4.10.1",
+    "react-icons": "^4.2.0",
     "react-parallax": "^3.1.2",
     "react-reveal": "^1.2.2",
     "react-router-bootstrap": "0.25.0",
     "react-router-dom": "5.1.2",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "shopify-buy": "^2.11.0"
   },
   "scripts": {
     "start": "react-scripts start",

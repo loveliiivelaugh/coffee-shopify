@@ -1,12 +1,65 @@
-#  ![Coffee](/public/coffee_cup_togo.png) Coffee Shopify Shop
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+# Coffee Shop
 
 ## Description
 
-Small example React.js web application integrated with Shopify via their RESTful APIs. Feature's a wide range of pages to demonstrate the possibilities capable with these technologies including a universally acessible cart and single product pages automatically created whenever a new product is added via the Shopify admin console.
+A sample coffee shop powered by Shopify. Built with React.js. Features 8 core pages as well as a single product page dynamically added whenever new product is entered. Features global cart access and interaction using Context API. Full checkout flow handled by Shopify. Mocked the design from a free HTML template and includes parallax background as well as light animations. Product management is handled in backend Shopify admin console.
 
-## Preview
+## Table of Contents
 
-[Screenshot](/public/screenshot.png)
+* [Description](#Description)
+
+* [Screenshots](#Screenshots)
+
+* [Installation](#Installation)
+
+* [Usage](#Usage)
+
+* [License](#License)
+
+* [Tests](#Tests)
+
+* [Questions](#Questions)
+
+
+## Screenshot(s)
+
+![Screenshot](/public/screenshot.png)
+
+![Screenshot 1](/src/assets/screenshot1.png)
+
+![Screenshot 2](/src/assets/screenshot2.png)
+
+![Screenshot 3](/src/assets/screenshot3.png)
+
+## Installation
+
+`npm i`
+
+## Usage
+
+*note* currently checkout flow has an issue with finalizing checkout and creating new checkout during user session.
+## License
+
+Copyright 2021
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+[MIT License](https://www.mit.edu/~amini/LICENSE.md)
+
+## How to Contribute
+
+Open to contributions.
+## Questions
+
+Follow me at my [GitHub](https://github.com/loveliiivelaugh) to discover more of my projects.
+
+Feel free to reach out at my [email](woodward.michael.a@gmail.com) woodward.michael.a@gmail.com if you have any odditional questions or just want to chat!
+
+
+#### This README was generated with the [CLI README Generator](https://github.com/loveliiivelaugh/nu-hw9-cli-readme-generator) app.
 ## 👉 Get Started
 Clone Repo
 ```
@@ -35,8 +88,6 @@ When the above command completes you'll be able to view your website at `http://
 This project uses the following libraries and services:
 - Framework - [Create React App](https://create-react-app.dev) with React Router
 - UI Kit - [Bootstrap](https://react-bootstrap.github.io)
-- Authentication - [Firebase Auth](https://firebase.google.com/products/auth)
-- Database - [Cloud Firestore](https://firebase.google.com/products/firestore)
 - Contact Form - [Formspree](https://formspree.io)
 - Analytics - [Google Analytics](https://googleanalytics.com)
 - Hosting - [Netlify](https://netlify.com)
@@ -82,69 +133,6 @@ function MyComponent(){
 ```
 </p>
 </details>
-
-<details>
-<summary><b>Authentication</b></summary>
-<p>
-  This project uses <a href="https://firebase.google.com">Firebase Auth</a> and includes a convenient <code>useAuth</code> hook (located in <code><a href="src/util/auth.js">src/util/auth.js</a></code>) that wraps Firebase and gives you common authentication methods. Depending on your needs you may want to edit this file and expose more Firebase functionality.
-
-```js
-import { useAuth } from './../util/auth.js';
-
-function MyComponent(){
-  // Get the auth object in any component
-  const auth = useAuth();
-
-  // Depending on auth state show signin or signout button
-  // auth.user will either be an object, null when loading, or false if signed out
-  return (
-    <div>
-      {auth.user ? (
-        <button onClick={(e) => auth.signout()}>Signout</button>
-      ) : (
-        <button onClick={(e) => auth.signin('hello@divjoy.com', 'yolo')}>Signin</button>
-      )}
-    </div>
-  );
-}
-```
-</p>
-</details>
-
-<details>
-<summary><b>Database</b></summary>
-<p>
-  This project uses <a href="https://firebase.google.com/products/firestore">Cloud Firestore</a> and includes some data fetching hooks to get you started (located in <code><a href="src/util/db.js">src/util/db.js</a></code>). You'll want to edit that file and add any additional query hooks you need for your project.
-
-```js
-import { useAuth } from './../util/auth.js';
-import { useItemsByOwner } from './../util/db.js';
-import ItemsList from './ItemsList.js';
-
-function ItemsPage(){
-  const auth = useAuth();
-
-  // Fetch items by owner
-  // Returned status value will be "idle" if we're waiting on 
-  // the uid value or "loading" if the query is executing.
-  const uid = auth.user ? auth.user.uid : undefined;
-  const { data: items, status } = useItemsByOwner(uid);
-
-  // Once we have items data render ItemsList component
-  return (
-    <div>
-      {(status === "idle" || status === "loading") ? (
-        <span>One moment please</span>
-      ) : (
-        <ItemsList data={items}>
-      )}
-    </div>
-  );
-}
-```
-</p>
-</details>
-
 <details>
 <summary><b>Deployment</b></summary>
 <p>
